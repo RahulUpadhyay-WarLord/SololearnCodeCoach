@@ -1,4 +1,9 @@
 # Popsicles
+
+##############################
+#### Problem Description #####
+##############################
+
 # You have a box of popsicles and you want to give them all away to a group of brothers and sisters. If you have enough left in the box to give them each an even amount you should go for it! If not, they will fight over them, and you should eat them yourself later.
 
 # Task
@@ -16,11 +21,16 @@
 # Sample Output
 # give away
 
+##############################
+########## Solution ##########
+##############################
 
+# Take Sololearn inputs
 siblings = int(input())
 popsicles = int(input())
 
+# Use the modulo operator % to determine if there is a remainder when dividing popsicles by siblings and print the result.
 if popsicles % siblings == 0:
-   print("give away")
+    print("give away")
 else:
-   print("eat them yourself")
+    print("eat them yourself")

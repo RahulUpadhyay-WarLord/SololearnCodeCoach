@@ -1,5 +1,9 @@
 # Extra-Terrestrials
 
+##############################
+#### Problem Description #####
+##############################
+
 # You meet a group of aliens, and their language is just like English except that they say every word backwards.
 # How will you learn to communicate with them?
 
@@ -18,5 +22,11 @@
 # Sample Output:
 # ydwoh
 
+##############################
+########## Solution ##########
+##############################
+
+# Take Sololearn input
 str = input()
+# Convert the input string by doing a start to finish substring (empty) with a -1 ordering.
 print(str[::-1])

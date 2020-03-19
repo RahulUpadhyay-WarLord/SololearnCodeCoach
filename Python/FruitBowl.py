@@ -1,5 +1,9 @@
 # Fruit Bowl
 
+##############################
+#### Problem Description #####
+##############################
+
 # You have a bowl on your counter with an even number of pieces of fruit in it. Half of them are bananas, and the other half are apples. You need 3 apples to make a pie.
 
 # Task
@@ -17,9 +21,17 @@
 # Sample Output
 # 4
 
+##############################
+########## Solution ##########
+##############################
+
+# Take Sololearn input
+import math
 fruit = int(input())
 
-import math
+# Half of your fruit is apples
 apples = fruit/2
+# It takes three apples to make a pie
 pies = apples/3
-print (math.floor(pies))
+# With the floor function, you round down to the nearest integer. i.e. 3.75 rounds to 3. (You can't make a portion of a pie.)
+print(math.floor(pies))

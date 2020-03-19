@@ -1,5 +1,9 @@
 # Paint costs
 
+##############################
+#### Problem Description #####
+##############################
+
 # You are getting ready to paint a piece of art. The canvas and brushes that you want to use will cost 40.00. Each color of paint that you buy is an additional 5.00. Determine how much money you will need based on the number of colors that you want to buy if tax at this store is 10%.
 
 # Task
@@ -17,10 +21,18 @@
 # Sample Output
 # 99
 
+##############################
+########## Solution ##########
+##############################
+
+# Take Sololearn input
 paintVarieties = int(input())
 
+# Set variables used in the final calculation
 canvasBrushCost = 40
 paintCost = paintVarieties * 5
 tax = 0.1
+
+# Determine the total cost of the canvas, brushes, total paint. Then, apply a 10% tax.
 total = (canvasBrushCost + paintCost) * (1 + tax)
 print (round(total))

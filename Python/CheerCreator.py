@@ -1,5 +1,9 @@
 # Cheer Creator
 
+##############################
+#### Problem Description #####
+##############################
+
 # You are cheering on your favorite team. After each play, if your team got over 10 yards further down the field, you stand up and give your friend a high five. If they don't move forward by at least a yard you stay quiet and say 'shh', and if they move forward 10 yards or less, you say 'Ra!' for every yard that they moved forward in that play.
 
 # Task
@@ -17,11 +21,18 @@
 # Sample Output
 # Ra!Ra!Ra!
 
+##############################
+########## Solution ##########
+##############################
+
+# Take Sololearn input
+# Convert it to a number with the int function.
 x = int(input())
 
-if x>10:
+if x > 10:
     print("High Five")
-elif x>0 and x <= 10:
+elif x > 0 and x <= 10:
+    # Python will repeat a string with the multiplication operand.
     print("Ra!"*x)
 else:
     print("shh")
