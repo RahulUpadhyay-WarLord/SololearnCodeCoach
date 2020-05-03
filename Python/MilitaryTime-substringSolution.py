@@ -25,7 +25,7 @@
 ########## Solution ##########
 ##############################
 
-# This solution uses regex
+# This solution uses substrings
 
 # Take Sololearn input
 standardTime = input()
