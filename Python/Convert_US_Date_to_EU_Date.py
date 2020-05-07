@@ -31,17 +31,26 @@ USDateStr = input()
 # Import the regex package
 import re
 
-# Import the time package
+# Import the datetime package
 from datetime import datetime
 
+# Use regex to identify if the first character of the input is a capital letter (first letter of a month)
 USDateStrRe = re.match(r'[A-Z]',USDateStr)
+
+# Use dateime.strptime to create a date object based on the result of the regex match.
 if (USDateStrRe is None):
-    #date is 11/19/2019 format
+    # If there was no result from the Regex search, date is 11/19/2019 format
     USDate = datetime.strptime(USDateStr,'%m/%d/%Y')
 else:
-    #date is in November 19, 2019 format
+    # If there there was a result from the Regex search, date is in November 19, 2019 format
+    # %B is the full month name
     USDate = datetime.strptime(USDateStr,'%B %d, %Y')
 
-EUDate = datetime.strftime(USDate,'%d/%m/%Y')
+# Use dateime.strftime to convert the date object into a string of the required formate.
+# To remove the leading zeros from the date (as required by the puzzle) on Linux/Android, use a hyphen between the % and the letter code. (This is the solution that will run on Sololearn)
+EUDate = datetime.strftime(USDate,'%-d/%-m/%Y')
+
+# To remove the leading zeros from the date (as required by the puzzle) on Windows, use a pound sign between the % and the letter code.
+# EUDate = datetime.strftime(USDate,'%#d/%#m/%Y')
 
 print(EUDate)
