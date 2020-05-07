@@ -40,10 +40,8 @@ if (USDateStrRe is None):
     USDate = datetime.strptime(USDateStr,'%m/%d/%Y')
 else:
     #date is in November 19, 2019 format
-    USDate = datetime.strptime(USDateStr,'%B/%d, /%Y')
+    USDate = datetime.strptime(USDateStr,'%B %d, %Y')
 
 EUDate = datetime.strftime(USDate,'%d/%m/%Y')
 
 print(EUDate)
-# https://  docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
-# https://stackoverflow.com/questions/35432952/convert-us-dates-to-uk
